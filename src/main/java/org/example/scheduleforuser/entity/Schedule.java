@@ -8,7 +8,7 @@ import org.example.scheduleforuser.dto.ScheduleRequestDto;
 @Entity
 @Getter
 @NoArgsConstructor
-public class Schedule extends ScheduleDateEntity {
+public class Schedule extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,6 +35,8 @@ public class Schedule extends ScheduleDateEntity {
 
     public void update(ScheduleRequestDto scheduleRequestDto) {
         this.title = scheduleRequestDto.getTitle();
+        this.content = scheduleRequestDto.getContent();
         this.author = scheduleRequestDto.getAuthor();
+        // password는 업데이트 시 사용하지 않으므로 제외
     }
 }

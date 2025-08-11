@@ -1,19 +1,18 @@
 package org.example.scheduleforuser.dto;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.example.scheduleforuser.entity.Schedule;
+
 import java.time.LocalDateTime;
 
 @Getter
-@NoArgsConstructor
 public class ScheduleResponseDto {
-    private Long id;
-    private String title;
-    private String content;
-    private String author;
-    private LocalDateTime createdAt;
-    private LocalDateTime modifiedAt;
+    private final Long id;
+    private final String title;
+    private final String content;
+    private final String author;
+    private final LocalDateTime createdAt;
+    private final LocalDateTime modifiedAt;
 
     // 엔티티를 받아서 Dto로 변환해주는 생성자
     public ScheduleResponseDto(Schedule schedule) {
