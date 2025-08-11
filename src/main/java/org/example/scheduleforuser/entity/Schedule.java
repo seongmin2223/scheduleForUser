@@ -32,4 +32,9 @@ public class Schedule extends ScheduleDateEntity {
         this.author = requestDto.getAuthor();
         this.password = requestDto.getPassword();
     }
+
+    public void update(ScheduleRequestDto scheduleRequestDto) {
+        this.title = scheduleRequestDto.getTitle();
+        this.author = scheduleRequestDto.getAuthor();
+    }
 }
