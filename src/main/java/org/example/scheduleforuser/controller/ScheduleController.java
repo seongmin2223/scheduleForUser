@@ -20,7 +20,7 @@ public class ScheduleController {
     }
 
     @GetMapping("/findAllSchedule")
-    public List<ScheduleResponseDto> findAllSchedule(@RequestParam(required = false) Long id) {
+    public List<ScheduleResponseDto> findAllSchedule() {
         return scheduleService.findAllSchedule();
     }
 
@@ -35,9 +35,9 @@ public class ScheduleController {
     }
 
     @DeleteMapping("/deleteSchedule/{id}")
-    public String deleteSchedule(@PathVariable Long id) {
-        scheduleService.deleteSchedule(id);
-        return "삭제성공";
+    public String deleteSchedule(@PathVariable Long id, @RequestBody ScheduleRequestDto requestDto) {
+        scheduleService.deleteSchedule(id, requestDto.getPassword()); // Service 메서드 수정 필요
+        return "삭제 성공"; // 반환 메시지도 통일성 있게 수정
     }
 
 
