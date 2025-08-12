@@ -39,7 +39,4 @@ public class ScheduleController {
         scheduleService.deleteSchedule(id, requestDto.getPassword()); // Service 메서드 수정 필요
         return "삭제 성공"; // 반환 메시지도 통일성 있게 수정
     }
-
-
-
 }
