@@ -16,7 +16,7 @@ public class LoginService {
     private final UserRepository userRepository;
 
     @Transactional(readOnly = true)
-    public User Login(LoginRequestDto requestDto) {
+    public User Login(LoginRequestDto requestDto) { //사용자 이메일로 조회 후 비밀번호 일치 여부 확인
         User user = userRepository.findByEmail(requestDto.getEmail())
                 .orElseThrow(()-> new IllegalArgumentException("이메일 또는 비밀번호가 다릅니다."));
 
