@@ -24,10 +24,10 @@ public class User extends BaseEntity {
     @Column(nullable = false)
     private String password;
 
-    public User(UserRequestDto requestDto){
-        this.username = requestDto.getUsername();
-        this.email = requestDto.getEmail();
-        this.password = requestDto.getPassword();
+    public User(String username, String email, String password) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
     }
 
     public void update(UserRequestDto requestDto){
