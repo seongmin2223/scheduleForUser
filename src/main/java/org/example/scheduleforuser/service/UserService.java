@@ -1,6 +1,7 @@
 package org.example.scheduleforuser.service;
 
 import lombok.RequiredArgsConstructor;
+import org.example.scheduleforuser.config.PasswordEncoder;
 import org.example.scheduleforuser.dto.UserRequestDto;
 import org.example.scheduleforuser.dto.UserResponseDto;
 import org.example.scheduleforuser.entity.User;
@@ -17,10 +18,17 @@ import java.util.NoSuchElementException;
 public class UserService {
 
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Transactional
     public UserResponseDto save(UserRequestDto requestDto) {
-        User user = new User(requestDto);
+        String encodedPassword = passwordEncoder.encode(requestDto.getPassword());
+
+        User user = new User(
+                requestDto.getUsername(),
+                requestDto.getEmail(),
+                encodedPassword
+        );
         userRepository.save(user);
         return new UserResponseDto(user);
     }
