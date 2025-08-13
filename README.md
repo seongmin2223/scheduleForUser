@@ -113,26 +113,3 @@
     * `DELETE /deleteSchedule/{id}`: 특정 일정 삭제 (비밀번호 확인)
 
 ---
-
-## 기여 방법 🤝
-
-프로젝트에 기여하고 싶으시다면, 다음 단계를 따라주세요.
-
-1.  이 저장소를 **Fork** 합니다.
-2.  새로운 기능 브랜치를 생성합니다 (`git checkout -b feature/your-feature-name`).
-3.  변경 사항을 커밋하고 푸시합니다.
-4.  **Pull Request**를 생성하여 변경 내용을 제안합니다.
-
----
-
-## 라이선스 📄
-
-이 프로젝트는 **MIT 라이선스**를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
-
----
-
-## 연락처 📧
-
-* **이름**: [당신의 이름]
-* **이메일**: [your-email@example.com]
-* **GitHub**: [your-github-profile-link](https://github.com/your-github-profile)
