@@ -55,41 +55,11 @@
 
 ## 기술 스택 🛠️
 
-* **백엔드**: Java 17+, Spring Boot 3.x
-* **데이터베이스**: H2 Database (개발용), MySQL/PostgreSQL (운영용)
+* **백엔드**: Java 17+, Spring Boot 3.5.4
+* **데이터베이스**: MySQL
 * **ORM**: JPA, Hibernate
 * **보안**: Spring Security (기반 필터), `at.favre.lib:bcrypt`
 * **기타**: Lombok (코드 간결화)
-
----
-
-## 설치 및 실행 방법 ⚙️
-
-1.  **프로젝트 클론**:
-
-    ```bash
-    git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
-    ```
-
-2.  **프로젝트 디렉토리 이동**:
-
-    ```bash
-    cd your-repository-name
-    ```
-
-3.  **의존성 설치**:
-    Maven 또는 Gradle을 사용하여 프로젝트 의존성을 다운로드합니다. (예: `gradle build` 또는 `mvn clean install`)
-
-4.  **애플리케이션 실행**:
-    IDE(IntelliJ IDEA, Eclipse 등)에서 `main` 클래스를 실행하거나, 터미널에서 아래 명령어를 사용합니다.
-
-    ```bash
-    ./gradlew bootRun  # Gradle 사용 시
-    # 또는
-    ./mvnw spring-boot:run # Maven 사용 시
-    ```
-
----
 
 ## API 엔드포인트 📡
 
